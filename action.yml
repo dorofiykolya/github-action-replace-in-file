@@ -1,0 +1,25 @@
+name: "REPLACE-IN-FILE"
+description: "find and replace"
+inputs:
+  file:
+    description: "path to file"
+    required: true
+    default: "\n"
+  search:
+    description: "string"
+    required: false
+    default: ""
+  replace:
+    description: "string"
+    required: false
+    default: ""
+  list:
+    description: "list of object{search, replace}"
+    required: false
+    default: ""
+outputs:
+  status: # id of output
+    description: "status: ok|fail"
+runs:
+  using: "node12"
+  main: "dist/index.js"
